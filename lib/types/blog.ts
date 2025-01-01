@@ -35,8 +35,12 @@ export const blogPosts: BlogPost[] = [
       comments: 0,
       likes: 2,
     },
-    content: "Welcome to your blog post. Use this space to connect with your readers..."
-  },
+    content: `
+    Day 1 of our Mexico adventure! We arrived in Oaxaca, a city full of history, vibrant culture, and mouthwatering food. 
+    The streets are lined with colonial buildings, bustling markets, and colorful art, and the air is filled with the scent of street tacos. 
+    Today, we explored the city center, visited the Zócalo (main square), and took in the stunning views of the surrounding mountains. 
+    Oaxaca charm lies not only in its history but also in its food, and we cant wait to share our culinary experiences throughout this trip. Stay tuned for more!
+    `  },
   {
     id: "japan-adventure",
     title: "A Week in Tokyo: Urban Adventures",
@@ -53,8 +57,13 @@ export const blogPosts: BlogPost[] = [
       comments: 5,
       likes: 18,
     },
-    content: "Welcome to your blog post. Use this space to connect with your readers..."
-  },
+    content: `
+    Tokyo is a city that never sleeps, with its neon lights, cutting-edge technology, and blend of old and new. 
+    From the ancient temples of Asakusa to the towering skyscrapers of Shibuya, every corner of Tokyo offers something new and exciting. 
+    Our first stop was the iconic Shibuya Crossing, where the sheer volume of people crossing the street at once is a sight to behold. 
+    We also visited Akihabara, Tokyo's tech and gaming hub, and explored the serene gardens of the Meiji Shrine. 
+    Tokyo has a perfect balance of modernity and tradition, and we can't wait to explore more in the coming days. Follow along for more adventures!
+    `  },
   {
     id: "italian-cuisine",
     title: "Discovering Italian Cuisine in Florence",
@@ -71,6 +80,11 @@ export const blogPosts: BlogPost[] = [
       comments: 3,
       likes: 12,
     },
-    content: "Welcome to your blog post. Use this space to connect with your readers..."
-  },
+    content: `
+    Florence, the birthplace of the Renaissance, is not just a city of art but also a city of food. 
+    Tuscany's cuisine is simple yet full of flavor, using the freshest local ingredients and centuries-old recipes. 
+    From rich ribollita (a hearty vegetable soup) to tender bistecca alla fiorentina (Florentine steak), each dish tells the story of this beautiful region. 
+    We visited a traditional trattoria, where the chef prepared fresh pasta from scratch, and enjoyed an unforgettable meal paired with a local Chianti wine. 
+    Florence offers more than just its art and architecture—its a food lovers paradise that will leave you craving more.
+    `  },
 ];

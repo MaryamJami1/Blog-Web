@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "mexico-diary-day-1",
     title: "The Mexico Diary, Day 1: Oaxaca",
-    subtitle: "Summarize your post in a few short, punchy sentences to entice readers.",
+    subtitle: "Summarize your post in a few short, punchy sentences to entice readers...",
     image: "/images/blog1.jpg",
     author: {
       name: "Admin",
@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "japan-adventure",
     title: "A Week in Tokyo: Urban Adventures",
-    subtitle: "Exploring Tokyo's vibrant streets, temples, and technology hubs.",
+    subtitle: "Exploring Tokyo's vibrant streets, temples, and technology hubs...",
     image: "/images/blog3.jpg",
     author: {
       name: "Travel Guide",
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "italian-cuisine",
     title: "Discovering Italian Cuisine in Florence",
-    subtitle: "A gastronomic journey through Tuscany's authentic recipes.",
+    subtitle: "A gastronomic journey through Tuscany's authentic recipes...",
     image: "/images/blog3 (2).jpg",
     author: {
       name: "Food Explorer",

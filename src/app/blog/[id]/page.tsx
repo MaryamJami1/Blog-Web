@@ -1,19 +1,26 @@
-import { notFound } from "next/navigation"
-import { blogPosts } from "../../../../lib/types/blog"
-import BlogContent from "@/app/components/BlogContent"
+import { notFound } from "next/navigation";
+import BlogContent from "../../components/BlogContent";
+import type { Metadata } from "next";
+import { blogPosts } from "../../../../lib/types/blog";
 
-// Correct the types for App Router
-type BlogPostPageProps = {
-  params: {
-    id: string
-  }
+// Define the type for dynamic route params
+type Params = {
+  id: string;
+};
+
+// Utility function to get a blog post by ID
+async function getBlogPostById(id: string) {
+  return blogPosts.find((post) => post.id === id) || null;
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find((post) => post.id === params.id)
+// Blog Post Page Component
+export default async function BlogPostPage({ params }: { params: Promise<Params> }) {
+  // Await the resolved `params` before using it
+  const resolvedParams = await params;
+  const post = await getBlogPostById(resolvedParams.id);
 
   if (!post) {
-    notFound() // Not found if no matching post is found
+    return notFound(); // Render a 404 page if the blog post isn't found
   }
 
   return (
@@ -29,5 +36,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         stats={post.stats}
       />
     </main>
-  )
+  );
+}
+
+// Generate Metadata for the page
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  // Await the resolved `params` before using it
+  const resolvedParams = await params;
+  const post = await getBlogPostById(resolvedParams.id);
+
+  return {
+    title: post ? post.title : "Post Not Found",
+    description: post ? post.subtitle : "No blog post found with this ID.",
+  };
+}
+
+// Generate Static Params for the page
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    id: post.id, // Generate static params based on blog posts' IDs
+  }));
 }

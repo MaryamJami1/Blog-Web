@@ -3,12 +3,11 @@ import { blogPosts } from "../../../../lib/types/blog"
 import BlogContent from "@/app/components/BlogContent"
 
 interface BlogPostPageProps {
-  params: {
-    id: string
-  }
+  params: { id: string }
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  // Ensure params are correctly typed here
   const post = blogPosts.find((post) => post.id === params.id)
 
   if (!post) {

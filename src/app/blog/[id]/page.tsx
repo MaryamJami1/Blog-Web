@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation"
 import { blogPosts } from "../../../../lib/types/blog"
 import BlogContent from "@/app/components/BlogContent"
@@ -27,10 +26,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         readTime={post.readTime}
         category="Travel"
         stats={post.stats}
-        
       />
-     
     </main>
   )
 }
-

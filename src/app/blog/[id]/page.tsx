@@ -2,16 +2,18 @@ import { notFound } from "next/navigation"
 import { blogPosts } from "../../../../lib/types/blog"
 import BlogContent from "@/app/components/BlogContent"
 
-interface BlogPostPageProps {
-  params: { id: string }
+// Correct the types for App Router
+type BlogPostPageProps = {
+  params: {
+    id: string
+  }
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  // Ensure params are correctly typed here
   const post = blogPosts.find((post) => post.id === params.id)
 
   if (!post) {
-    notFound()
+    notFound() // Not found if no matching post is found
   }
 
   return (
